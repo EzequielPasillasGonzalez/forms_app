@@ -87,7 +87,6 @@ class _Body extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: BlocBuilder<CounterCubit, CounterState>(
-        buildWhen: (previous, current) => current.counter != previous.counter,
         builder: (context, state) {
           return Text('Counter value: ${state.counter}');
         },
