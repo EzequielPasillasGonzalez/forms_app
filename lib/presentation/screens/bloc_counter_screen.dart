@@ -18,7 +18,8 @@ class _BlocCounterView extends StatelessWidget {
   const _BlocCounterView();
 
   void resetCounter(BuildContext context) {
-    context.read<CounterBloc>().add(CounterReset());
+    // context.read<CounterBloc>().add(CounterReset());
+    context.read<CounterBloc>().resetCounter();
   }
 
   @override
@@ -46,7 +47,8 @@ class _FloatingActionButton extends StatelessWidget {
   const _FloatingActionButton();
 
   void increasedCounterBy(BuildContext context, [int value = 1]) {
-    context.read<CounterBloc>().add(CounterIncreased(value));
+    // context.read<CounterBloc>().add(CounterIncreased(value));
+    context.read<CounterBloc>().increasedCounterBy(value);
   }
 
   @override
